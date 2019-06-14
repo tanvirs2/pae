@@ -18,7 +18,7 @@ class NewsController extends Controller
         $compact = compact(
             'newses'
         );
-        return view('website.news.index', $compact);
+        //return view('website.news.index', $compact);
     }
 
     /**

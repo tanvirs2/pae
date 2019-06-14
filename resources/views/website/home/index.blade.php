@@ -1,4 +1,4 @@
-@extends('website.layout.master')
+@extends('website.layouts.master')
 
 @section('website-content')
 <div class="simple-slider">

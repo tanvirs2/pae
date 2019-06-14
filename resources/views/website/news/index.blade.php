@@ -1,4 +1,4 @@
-@extends('website.layout.master')
+@extends('website.layouts.master')
 
 @section('website-content')
     <header class="py-5 bg-image-full bg-image-contact">

@@ -13,13 +13,30 @@
 
 
 /*
- * 1 user
+ * 1 home
+ * 2 admin
+ * 3 news
  * */
 
 Route::get('/', 'HomeController@index');
 
 
 //___1
+Route::prefix('home')->group(function (){
+    $prefixName = 'home';
+    $controllerName = Str::studly($prefixName);
+    Route::get('/', $controllerName.'Controller@index')->name($prefixName.'-dashboard');
+    Route::get('news-list', $controllerName.'Controller@newsList')->name($prefixName.'-news-list');
+});
+
+//___2
+Route::prefix('admin')->group(function (){
+    $prefixName = 'admin';
+    $controllerName = Str::studly($prefixName);
+    Route::get('/', $controllerName.'Controller@index')->name($prefixName.'-dashboard');
+});
+
+//___3
 Route::prefix('news')->group(function (){
     $prefixName = 'news';
     $controllerName = Str::studly($prefixName);
