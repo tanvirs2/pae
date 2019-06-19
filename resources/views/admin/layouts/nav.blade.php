@@ -13,7 +13,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="{{ route('admin-dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -40,10 +40,17 @@
             <i class="fas fa-fw fa-envelope"></i>
             <span>Contacts</span></a>
     </li>
+
     <li class="nav-item {{ Route::is('project-list') ? 'active':null }}">
         <a class="nav-link" href="{{ route('project-list') }}">
             <i class="fas fa-fw fa-bezier-curve"></i>
             <span>Projects</span></a>
+    </li>
+
+    <li class="nav-item {{ Route::is('about-show') ? 'active':null }}">
+        <a class="nav-link" href="{{ route('about-show') }}">
+            <i class="fas fa-fw fa-align-left"></i>
+            <span>About</span></a>
     </li>
 
     <!-- Nav Item - Tables -->

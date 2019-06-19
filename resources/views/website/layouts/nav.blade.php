@@ -26,7 +26,7 @@
                                     <li class="{{ Request::is('/')?'active':null }}" role="presentation"><a href="{{ url('/') }}"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a></li>
                                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">About Us <span class="caret"></span></a>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li role="presentation"><a href="about.html">About Us</a></li>
+                                            <li class="{{ Route::is('home-about') ? 'active':null }}" role="presentation"><a href="{{ route('home-about') }}">About Us</a></li>
                                             <li class="{{ Route::is('home-blog-list') ? 'active':null }}" role="presentation"><a href="{{ route('home-blog-list') }}">Blog</a></li>
                                             <li role="presentation"><a href="#">Third Item</a></li>
                                         </ul>

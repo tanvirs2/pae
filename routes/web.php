@@ -35,6 +35,8 @@ Route::prefix('home')->group(function (){
     Route::get('single-blog/{project}', $controllerName.'Controller@showSingleProject')->name($prefixName.'-single-blog');
 
     Route::get('contact', $controllerName.'Controller@contactPage')->name($prefixName.'-contact');
+
+    Route::get('about', $controllerName.'Controller@aboutPage')->name($prefixName.'-about');
 });
 
 //___2
@@ -82,6 +84,19 @@ Route::prefix('project')->group(function (){
     Route::get('edit/{'.Str::camel($prefixName).'}', $controllerName.'Controller@edit')->name($prefixName.'-edit');
     Route::patch('update/{'.Str::camel($prefixName).'}', $controllerName.'Controller@update')->name($prefixName.'-update');
     Route::get('destroy/{'.Str::camel($prefixName).'}', $controllerName.'Controller@destroy')->name($prefixName.'-destroy');
+});
+
+//___5
+Route::prefix('about')->group(function (){
+    $prefixName = 'about';
+    $controllerName = Str::studly($prefixName);
+    //Route::get('list', $controllerName.'Controller@index')->name($prefixName.'-list');
+    //Route::get('create', $controllerName.'Controller@create')->name($prefixName.'-create');
+    //Route::post('store', $controllerName.'Controller@store')->name($prefixName.'-store');
+    Route::get('show', $controllerName.'Controller@show')->name($prefixName.'-show');
+    Route::get('edit', $controllerName.'Controller@edit')->name($prefixName.'-edit');
+    Route::patch('update', $controllerName.'Controller@update')->name($prefixName.'-update');
+    //Route::get('destroy/{'.Str::camel($prefixName).'}', $controllerName.'Controller@destroy')->name($prefixName.'-destroy');
 });
 
 Auth::routes();

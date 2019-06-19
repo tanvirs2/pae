@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\About;
 use App\Home;
 use App\News;
 use App\Project;
@@ -72,6 +73,16 @@ class HomeController extends Controller
     public function contactPage()
     {
         return view('website.contact.index');
+    }
+
+    public function aboutPage()
+    {
+        $about = About::first();
+        $compact = compact(
+            'about'
+        );
+
+        return view('website.about.index', $compact);
     }
 
     /**
