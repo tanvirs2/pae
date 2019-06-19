@@ -226,6 +226,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        //user defined
+        'Image' => Intervention\Image\Facades\Image::class,
+        'Str' => Illuminate\Support\Str::class
     ],
 
 ];

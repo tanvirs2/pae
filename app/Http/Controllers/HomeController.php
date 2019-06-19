@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Home;
 use App\News;
+use App\Project;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -29,6 +30,49 @@ class HomeController extends Controller
         );
         return view('website.news.index', $compact);
     }
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\News  $news
+     * @return \Illuminate\Http\Response
+     */
+    public function showSingleNews(News $news)
+    {
+        $compact = compact(
+            'news'
+        );
+
+        return view('website.news.single', $compact);
+    }
+
+    public function projectList()
+    {
+        $newses = Project::all();
+        $compact = compact(
+            'newses'
+        );
+        return view('website.project.index', $compact);
+    }
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\News  $news
+     * @return \Illuminate\Http\Response
+     */
+    public function showSingleProject(Project $project)
+    {
+        $news = $project;
+        $compact = compact(
+            'news'
+        );
+
+        return view('website.project.single', $compact);
+    }
+
+    public function contactPage()
+    {
+        return view('website.contact.index');
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -51,6 +95,7 @@ class HomeController extends Controller
     {
         //
     }
+
 
     /**
      * Show the form for editing the specified resource.

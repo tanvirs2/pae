@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\News, Auth, Image;
+use App\Project, Image;
 use Illuminate\Http\Request;
 
-class NewsController extends Controller
+class ProjectController extends Controller
 {
-    public $_img_folder = 'img/news';
+    public $_img_folder = 'img/project';
     public $pageData = [];
 
     public function __construct()
     {
         $this->pageData = [
-            'pageName' => 'News',
-            'route' => 'news',
+            'viewFolder' => 'project',
+            'pageName' => 'Project',
+            'route' => 'project',
         ];
 
         view()->share('pageData', $this->pageData);
@@ -26,11 +27,12 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $newses = News::all();
+        //dd((new Project())->newsImg());
+        $newses = Project::all();
         $compact = compact(
             'newses'
         );
-        return view('admin.news.index', $compact);
+        return view('admin.'.$this->pageData['viewFolder'].'.index', $compact);
     }
 
     /**
@@ -40,7 +42,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        return view('admin.news.create');
+        return view('admin.'.$this->pageData['viewFolder'].'.create');
     }
 
     /**
@@ -51,19 +53,12 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        $loggedUser = Auth::user();
-
-        if(!$loggedUser)
-        {
-            return redirect()->back()->with(['fail'=>'Unauthorized Access.']);
-        }
-
         $request->validate([
             'title' => 'required',
         ]);
 
 
-        $news = new News();
+        $news = new Project();
         $news->title = $request['title'];
         $news->details = $request['details'];
         $news->date = $request['date'];
@@ -83,40 +78,43 @@ class NewsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\News  $news
+     * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function show(News $news)
+    public function show(Project $project)
     {
+        $news = $project;
+
         $compact = compact(
             'news'
         );
 
-        return view('admin.news.single', $compact);
+        return view('admin.'.$this->pageData['viewFolder'].'.single', $compact);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\News  $news
+     * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function edit(News $news)
+    public function edit(Project $project)
     {
+        $news = $project;
         $compact = compact(
             'news'
         );
-        return view('admin.news.edit', $compact);
+        return view('admin.'.$this->pageData['viewFolder'].'.edit', $compact);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\News  $news
+     * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, News $news)
+    public function update(Request $request, Project $project)
     {
         //
     }
@@ -124,12 +122,12 @@ class NewsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\News  $news
+     * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function destroy(News $news)
+    public function destroy(Project $project)
     {
-        $news->delete();
+        $project->delete();
         return back()->with(['info'=> ' Delete news Successfully.']);
     }
 }

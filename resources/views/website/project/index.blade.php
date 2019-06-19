@@ -16,10 +16,10 @@
                     <div class="panel panel-default">
                         <div class="panel-heading"><h4>{{ $news->title }}</h4></div>
                         <div class="panel-body">
-                            <img src="{{ $news->newsImg() }}" class="img-responsive center-block" style="height: 200px">
+                            <img src="{{ $news->getImage('project') }}" class="img-responsive center-block" style="height: 200px">
                         </div>
                         <div class="panel-footer" style="height: 60px;">{{ Str::limit($news->details, 50, '...') }}
-                            <a href="{{ route('home-single-news', $news->id) }}"><small>বিস্তারিত</small></a>
+                            <a href="{{ route('home-single-blog', $news->id) }}"><small>বিস্তারিত</small></a>
                         </div>
                     </div>
                 </div>

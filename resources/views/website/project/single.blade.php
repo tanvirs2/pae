@@ -29,7 +29,7 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img src="{{ $news->newsImg() }}" alt="Los Angeles">
+                                <img src="{{ $news->getImage('project') }}" alt="Los Angeles">
                             </div>
 
                             <div class="item">
@@ -39,7 +39,7 @@
                                     <span class="month">Nov</span>
                                     <span class="year">2019</span>
                                 </div>
-                                <img src="{{ $news->newsImg() }}" alt="Los Angeles">
+                                <img src="{{ $news->getImage('project') }}" alt="Los Angeles">
                             </div>
                         </div>
                         <!-- Left and right controls -->

@@ -27,14 +27,14 @@
                                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">About Us <span class="caret"></span></a>
                                         <ul class="dropdown-menu" role="menu">
                                             <li role="presentation"><a href="about.html">About Us</a></li>
-                                            <li role="presentation"><a href="blog.html">Blog</a></li>
+                                            <li class="{{ Route::is('home-blog-list') ? 'active':null }}" role="presentation"><a href="{{ route('home-blog-list') }}">Blog</a></li>
                                             <li role="presentation"><a href="#">Third Item</a></li>
                                         </ul>
                                     </li>
                                     <li role="presentation"><a href="#">Reports</a></li>
                                     <li class="{{ Route::is('home-news-list') ? 'active':null }}" role="presentation"><a href="{{ route('home-news-list') }}">News</a></li>
                                     <li role="presentation"><a href="luv.html">Luv</a></li>
-                                    <li role="presentation"><a href="contacts.html">Contacts</a></li>
+                                    <li class="{{ Route::is('home-contact')?'active':null }}" role="presentation"><a href="{{ route('home-contact') }}">Contacts</a></li>
                                     <li class="dropdown">
                                         <div class="flag-dropdown">
                                             <a href="index" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-expanded="false"><img src="{{ asset('') }}assets/images/US-Eng-logo.png" alt="English" class="img-thumbnail icon-small">&nbsp;|&nbsp;<span>En</span> <span class="caret"></span></a>

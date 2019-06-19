@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="{{ asset('') }}assets/css/styles.css">
     <title>Pae Esamba</title>
     <style>
+        .news-thumb {
+            //max-height: 300px;
+        }
         .swiper-container {
             width: 100%;
             height: 100%;
