@@ -53,6 +53,12 @@
             <span>About</span></a>
     </li>
 
+    <li class="nav-item {{ Route::is('about-show') ? 'active':null }}">
+        <a class="nav-link" href="{{ route('about-show') }}">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Team</span></a>
+    </li>
+
     <!-- Nav Item - Tables -->
     <li class="nav-item">
         <a class="nav-link" href="tables.html">

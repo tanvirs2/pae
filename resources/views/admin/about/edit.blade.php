@@ -43,6 +43,9 @@
                     <form action="{{ route($pageData['route'].'-update') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('PATCH')
+                        <div class="form-group">
+                            <input type="file" name="img">
+                        </div>
                         <h3>Our vision</h3>
                         <div class="form-group">
                             <textarea name="vision" class="form-control">{{ $about->vision }}</textarea>

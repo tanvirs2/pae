@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\About;
+use App\About, Image;
 use Illuminate\Http\Request;
 
 class AboutController extends Controller
@@ -97,6 +97,13 @@ class AboutController extends Controller
         $about->vision = $request['vision'];
         $about->value = $request['value'];
         $about->other = $request['other'];
+        if ($request->hasFile('img')) {
+            $img = $request->file('img');
+            $about->img = $fileName = time(). '.' .$img->getClientOriginalExtension() ;
+            $img_resize = Image::make($img->getRealPath());
+            $img_resize->widen(250);
+            $img_resize->save(public_path($this->_img_folder.'/' .$fileName));
+        }
         $about->save();
 
         return back()->with(['success' => 'Successfully update about !']);
