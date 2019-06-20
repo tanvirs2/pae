@@ -4,19 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProjectsTable extends Migration
+class CreateLuvsTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-
     public function up()
     {
-        Schema::create('projects', function (Blueprint $table) {
+        Schema::create('luvs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
             $table->string('title');
             $table->text('details');
             $table->date('date')->nullable();
@@ -32,6 +30,6 @@ class CreateProjectsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('projects');
+        Schema::dropIfExists('luvs');
     }
 }

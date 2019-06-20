@@ -4,23 +4,24 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProjectsTable extends Migration
+class CreateTeamsTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-
     public function up()
     {
-        Schema::create('projects', function (Blueprint $table) {
+        Schema::create('teams', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('title');
-            $table->text('details');
-            $table->date('date')->nullable();
-            $table->text('img')->nullable();
+            $table->string('details')->nullable();
+            $table->string('img')->nullable();
+            $table->string('position')->nullable();
+            $table->string('facebook_link')->nullable();
+            $table->string('tweeter_link')->nullable();
+            $table->string('linked_link')->nullable();
             $table->timestamps();
         });
     }
@@ -32,6 +33,6 @@ class CreateProjectsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('projects');
+        Schema::dropIfExists('teams');
     }
 }

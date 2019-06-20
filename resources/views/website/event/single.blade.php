@@ -20,27 +20,13 @@
                                     <a href="#"><i class="fa fa-linkedin-square"></i></a>
                                     </span>
                     <div id="myCarousel" class="carousel slide top-10" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img src="{{ $news->getImage('about') }}" alt="Los Angeles">
+                                <img src="{{ $news->getImage('event') }}" alt="Los Angeles">
                             </div>
 
-                            <div class="item">
-                                <div class="date">
-                                    <span><i class="fa fa-calendar"></i></span>
-                                    <span class="day">4th</span>
-                                    <span class="month">Nov</span>
-                                    <span class="year">2019</span>
-                                </div>
-                                <img src="{{ $news->getImage('about') }}" alt="Los Angeles">
-                            </div>
+
                         </div>
                         <!-- Left and right controls -->
                     </div>

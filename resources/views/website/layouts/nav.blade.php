@@ -33,7 +33,7 @@
                                     </li>
                                     <li role="presentation"><a href="#">Reports</a></li>
                                     <li class="{{ Route::is('home-news-list') ? 'active':null }}" role="presentation"><a href="{{ route('home-news-list') }}">News</a></li>
-                                    <li role="presentation"><a href="luv.html">Luv</a></li>
+                                    <li class="{{ Route::is('home-event-list') ? 'active':null }}" role="presentation"><a href="{{ route('home-event-list') }}">Luv</a></li>
                                     <li class="{{ Route::is('home-contact')?'active':null }}" role="presentation"><a href="{{ route('home-contact') }}">Contacts</a></li>
                                     <li class="dropdown">
                                         <div class="flag-dropdown">

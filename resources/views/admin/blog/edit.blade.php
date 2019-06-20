@@ -10,36 +10,35 @@
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create a {{ $pageData['pageName'] }}!</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Edit {{ $pageData['pageName'] }}!</h1>
                             </div>
-                            <form class="user" action="{{ route($pageData['route'].'-store') }}" method="post" enctype="multipart/form-data">
+                            <form class="user" action="{{ route($pageData['route'].'-update', $news->id) }}" method="post" enctype="multipart/form-data">
                                 @csrf
+                                @method('PATCH')
                                 <div class="form-group">
                                     <input type="file" name="img">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" name="name" class="form-control form-control-user" placeholder="Name">
+                                        <input type="text" name="title" class="form-control form-control-user" value="{{ $news->title }}" placeholder="Title">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" name="title" class="form-control form-control-user" placeholder="Title">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6">
-                                        <input type="date" name="date" class="form-control form-control-user" placeholder="Details">
+                                        <input type="date" name="date" class="form-control form-control-user" value="{{ $news->date }}" placeholder="Details">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <textarea name="details" class="form-control form-control-user" ></textarea>
+                                    <textarea name="details" class="form-control form-control-user" >{{ $news->details }}</textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
-                                    Save {{ $pageData['pageName'] }}
+                                    Update {{ $pageData['pageName'] }}
                                 </button>
 
                             </form>
 
                         </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <img src="{{ $news->getImage('blog') }}" class="mt-4" alt="">
                     </div>
                 </div>
             </div>

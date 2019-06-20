@@ -41,10 +41,22 @@
             <span>Contacts</span></a>
     </li>
 
+    <li class="nav-item {{ Route::is('event-list') ? 'active':null }}">
+        <a class="nav-link" href="{{ route('event-list') }}">
+            <i class="fas fa-fw fa-ethernet"></i>
+            <span>Event</span></a>
+    </li>
+
     <li class="nav-item {{ Route::is('project-list') ? 'active':null }}">
         <a class="nav-link" href="{{ route('project-list') }}">
             <i class="fas fa-fw fa-bezier-curve"></i>
             <span>Projects</span></a>
+    </li>
+
+    <li class="nav-item {{ Route::is('blog-list') ? 'active':null }}">
+        <a class="nav-link" href="{{ route('blog-list') }}">
+            <i class="fas fa-fw fa-blog"></i>
+            <span>Blog</span></a>
     </li>
 
     <li class="nav-item {{ Route::is('about-show') ? 'active':null }}">

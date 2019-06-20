@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\About;
+use App\Event;
 use App\Home;
 use App\News;
 use App\Project;
+use App\Blog;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -68,6 +70,54 @@ class HomeController extends Controller
         );
 
         return view('website.project.single', $compact);
+    }
+
+    public function blogList()
+    {
+        $newses = Blog::all();
+        $compact = compact(
+            'newses'
+        );
+        return view('website.blog.index', $compact);
+    }
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\News  $news
+     * @return \Illuminate\Http\Response
+     */
+    public function showSingleBlog(Blog $blog)
+    {
+        $news = $blog;
+        $compact = compact(
+            'news'
+        );
+
+        return view('website.blog.single', $compact);
+    }
+
+    public function eventList()
+    {
+        $newses = Event::all();
+        $compact = compact(
+            'newses'
+        );
+        return view('website.event.index', $compact);
+    }
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\News  $news
+     * @return \Illuminate\Http\Response
+     */
+    public function showSingleEvent(Event $event)
+    {
+        $news = $event;
+        $compact = compact(
+            'news'
+        );
+
+        return view('website.event.single', $compact);
     }
 
     public function contactPage()

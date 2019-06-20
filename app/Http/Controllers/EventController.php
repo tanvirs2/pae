@@ -2,20 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Project, Image;
+use App\Event, Image;
 use Illuminate\Http\Request;
 
-class ProjectController extends Controller
+class EventController extends Controller
 {
-    public $_img_folder = 'img/project';
+    public $_img_folder = 'img/event';
     public $pageData = [];
 
     public function __construct()
     {
         $this->pageData = [
-            'viewFolder' => 'project',
-            'pageName' => 'Project',
-            'route' => 'project',
+            'viewFolder' => 'event',
+            'pageName' => 'Event',
+            'route' => 'event',
+            'imgFolder' => 'event',
         ];
 
         view()->share('pageData', $this->pageData);
@@ -27,8 +28,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //dd((new Project())->newsImg());
-        $newses = Project::all();
+        $newses = Event::all();
         $compact = compact(
             'newses'
         );
@@ -58,11 +58,10 @@ class ProjectController extends Controller
         ]);
 
 
-        $news = new Project();
+        $news = new Event();
         $news->title = $request['title'];
         $news->details = $request['details'];
         $news->date = $request['date'];
-        $news->name = $request['name'];
 
         if ($request->hasFile('img')) {
             $img = $request->file('img');
@@ -79,12 +78,12 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Project  $project
+     * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function show(Project $project)
+    public function show(Event $event)
     {
-        $news = $project;
+        $news = $event;
 
         $compact = compact(
             'news'
@@ -96,12 +95,12 @@ class ProjectController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Project  $project
+     * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function edit(Project $project)
+    public function edit(Event $event)
     {
-        $news = $project;
+        $news = $event;
         $compact = compact(
             'news'
         );
@@ -112,21 +111,20 @@ class ProjectController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Project  $project
+     * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Project $project)
+    public function update(Request $request, Event $event)
     {
         $request->validate([
             'title' => 'required',
         ]);
 
 
-        $news = $project;
+        $news = $event;
         $news->title = $request['title'];
         $news->details = $request['details'];
         $news->date = $request['date'];
-        $news->name = $request['name'];
 
         if ($request->hasFile('img')) {
             $img = $request->file('img');
@@ -143,12 +141,12 @@ class ProjectController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Project  $project
+     * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Project $project)
+    public function destroy(Event $event)
     {
-        $project->delete();
+        $event->delete();
         return back()->with(['info'=> ' Delete news Successfully.']);
     }
 }

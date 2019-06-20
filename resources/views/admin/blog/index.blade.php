@@ -27,7 +27,6 @@
                         <tr>
                             <th>#</th>
                             <th>Image</th>
-                            <th>Name</th>
                             <th>Title</th>
                             <th>Details</th>
                             <th>Date</th>
@@ -43,8 +42,7 @@
                         @foreach($newses as $news)
                             <tr>
                                 <td>{{ $sl++ }}</td>
-                                <td><img src="{{ $news->getImage('project') }}" style="width:100px;height:100px;"></td>
-                                <td>{{ $news->name }}</td>
+                                <td><img src="{{ $news->getImage('blog') }}" style="width:100px;height:100px;"></td>
                                 <td>{{ $news->title }}</td>
                                 <td>{{ Str::limit($news->details, 50, '...') }}</td>
                                 <td>{{ $news->date }}</td>
