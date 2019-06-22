@@ -107,71 +107,29 @@
         </div>
     </div>
     <div class="row">
+        @foreach($newses as $news)
         <div class="col-md-4">
             <div class="example-2 card" >
-                <div class="wrapper" style="background:url(assets/images/news/IMG_20170602_152742_A0_Rectangle_55_pattern.png) center/cover no-repeat;background-size: auto;">
+                <div class="wrapper" style="background:url({{ $news->newsImg() }}) center/cover no-repeat;background-size: auto;">
                     <div class="header">
                         <div class="date">
                             <i class="fa fa-calendar"></i>
-                            <span class="day">4th</span>
-                            <span class="month">Nov</span>
-                            <span class="year">2019</span>
+                            {{ $news->date }}
                         </div>
                     </div>
                     <div class="data">
                         <div class="content">
-                            <h1 class="title"><a href="#">Ceremony of youth day</a></h1>
-                            <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
+                            <h1 class="title"><a href="#">{{ $news->title }}</a></h1>
+                            <p class="text">{{ Str::limit($news->details, 50, '...') }}</p>
                             <span class="author">published by Admin</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="example-2 card" >
-                <div class="wrapper" style="background:url(assets/images/news/IMG_20170602_152742_A0_Rectangle_55_pattern.png) center/cover no-repeat;background-size: auto;">
-                    <div class="header">
-                        <div class="date">
-                            <i class="fa fa-calendar"></i>
-                            <span class="day">4th</span>
-                            <span class="month">Nov</span>
-                            <span class="year">2019</span>
-                        </div>
-                    </div>
-                    <div class="data">
-                        <div class="content">
-                            <h1 class="title"><a href="#">Ceremony of youth day</a></h1>
-                            <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
-                            <span class="author">published by Admin</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="example-2 card" >
-                <div class="wrapper" style="background:url(assets/images/news/IMG_20170602_152742_A0_Rectangle_55_pattern.png) center/cover no-repeat;background-size: auto;">
-                    <div class="header">
-                        <div class="date">
-                            <i class="fa fa-calendar"></i>
-                            <span class="day">4th</span>
-                            <span class="month">Nov</span>
-                            <span class="year">2019</span>
-                        </div>
-                    </div>
-                    <div class="data">
-                        <div class="content">
-                            <h1 class="title"><a href="#">Ceremony of youth day</a></h1>
-                            <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
-                            <span class="author">published by Admin</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @endforeach
         <div class="col-md-12">
-            <a href="#" class="view-more">View List &nbsp; <i class="fa fa-arrow-right"></i></a>
+            <a href="{{ route('home-news-list') }}" class="view-more">View List &nbsp; <i class="fa fa-arrow-right"></i></a>
         </div>
     </div>
 </div>
@@ -185,12 +143,12 @@
             <div class="col-md-4 col-sm-12">
                 <i class="fa fa-phone-square"></i>
                 <span>Call Us</span>
-                <p>+237 123 456 789</p>
+                <p>+{{ $others->phone ?? null }}</p>
             </div>
             <div class="col-md-4 col-sm-12">
                 <i class="fa fa-phone-square"></i>
                 <span>Email Us</span>
-                <p style="font-size: 25px;">infos@pae-essambanet </p>
+                <p style="font-size: 25px;">{{ $others->email ?? null }}</p>
             </div>
             <div class="col-md-4 col-sm-12">
                 <i class="fa fa-map"></i>
@@ -209,72 +167,26 @@
             </div>
         </div>
         <div class="row">
+            @foreach($teams as $team)
             <div class="col-md-3">
                 <div class="team" >
-                    <div class="wrapper" style="background:url(assets/images/team/team-01.png) center/cover no-repeat;">
+                    <div class="wrapper" style="background:url({{ $team->getImage('team') }}) center/cover no-repeat;">
                         <div class="test">
                             <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                             <div class="data">
                                 <div class="content">
-                                    <h4 class="title">John<span>&nbsp;Doe</span></h4>
-                                    <h5>CEO and Founder</h5>
-                                    <a class="view-profile">View profile &nbsp;<i class="fa fa-arrow-right"></i> </a>
+                                    <h4 class="title">{{ $team->name }}</h4>
+                                    <h5>{{ $team->position }}</h5>
+                                    <a class="view-profile" href="{{ route('home-single-team', $team->id) }}">View profile &nbsp;<i class="fa fa-arrow-right"></i> </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="team" >
-                    <div class="wrapper" style="background:url(assets/images/team/team-02.png) center/cover no-repeat;">
-                        <div class="test">
-                            <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-                            <div class="data">
-                                <div class="content">
-                                    <h4 class="title">John<span>&nbsp;Doe</span></h4>
-                                    <h5>CEO and Founder</h5>
-                                    <a class="view-profile">View profile &nbsp;<i class="fa fa-arrow-right"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="team" >
-                    <div class="wrapper" style="background:url(assets/images/team/team-03.png) center/cover no-repeat;">
-                        <div class="test">
-                            <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-                            <div class="data">
-                                <div class="content">
-                                    <h4 class="title">John<span>&nbsp;Doe</span></h4>
-                                    <h5>CEO and Founder</h5>
-                                    <a class="view-profile">View profile &nbsp;<i class="fa fa-arrow-right"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="team" >
-                    <div class="wrapper" style="background:url(assets/images/team/team-04.png) center/cover no-repeat;">
-                        <div class="test">
-                            <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-                            <div class="data">
-                                <div class="content">
-                                    <h4 class="title">John<span>&nbsp;Doe</span></h4>
-                                    <h5>CEO and Founder</h5>
-                                    <a class="view-profile">View profile &nbsp;<i class="fa fa-arrow-right"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
             <div class="col-md-12">
-                <a href="#" class="view-more">View full team list &nbsp; <i class="fa fa-arrow-right"></i></a>
+                <a href="{{ route('home-team-list') }}" class="view-more">View full team list &nbsp; <i class="fa fa-arrow-right"></i></a>
             </div>
         </div>
     </div>
@@ -290,47 +202,31 @@
             <div class="col-md-12" id="projects">
                 <div style="border: 1px solid #74737396;border-top-left-radius: 22px;">
                     <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
-                        <div class="btn-group" role="group">
-                            <button type="button" id="stars" class="btn project-active btn-white" href="#tab1" data-toggle="tab">
-                                <div class="hidden-xs">Saker <br>Project</div>
-                            </button>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <button type="button" id="favorites" class="btn btn-white" href="#tab2" data-toggle="tab">
-                                <div class="hidden-xs">Trainee<br>student project</div>
-                            </button>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <button type="button" id="following" class="btn btn-white" href="#tab3" data-toggle="tab">
-                                <div class="hidden-xs">Needy<br>student project</div>
-                            </button>
-                        </div>
+                        @foreach($projects as $project)
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn project-active btn-white" href="#tab{{ $project->id }}" data-toggle="tab">
+                                    <div class="hidden-xs">Trainee<br>student project</div>
+                                </button>
+                            </div>
+
+                        @endforeach
+
                     </div>
                     <div class="well" style="background-color: #EEEEEE; background-image: none;border-top-left-radius: 0px;border-top-right-radius: 0px;">
                         <div class="tab-content">
-                            <div class="tab-pane fade in active" id="tab1">
+                            @foreach($projects as $project)
+                            <div class="tab-pane fade in active" id="tab{{ $project->id }}">
                                 <h3>Title of the main project</h3>
                                 <span class="dot"></span>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                                 <p><a href="#">Read more&nbsp; <i class="fa fa-arrow-right"></i></a> </p>
                             </div>
-                            <div class="tab-pane fade in" id="tab2">
-                                <h3>Title of the main project 2</h3>
-                                <span class="dot"></span>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                <p><a href="#">Read more&nbsp; <i class="fa fa-arrow-right"></i></a> </p>
-                            </div>
-                            <div class="tab-pane fade in" id="tab3">
-                                <h3>Title of the main project 3</h3>
-                                <span class="dot"></span>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br>  It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                <p><a href="#">Read more&nbsp; <i class="fa fa-arrow-right"></i></a> </p>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <a href="#" class="view-more">View full list &nbsp; <i class="fa fa-arrow-right"></i></a>
+                    <a href="{{ route('home-project-list') }}" class="view-more">View full list &nbsp; <i class="fa fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>

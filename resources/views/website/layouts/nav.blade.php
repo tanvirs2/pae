@@ -10,15 +10,16 @@
                     <div class="collapse navbar-collapse" id="navcol-1" >
                         <div class="row">
                             <div class="col-md-12" style="padding-right: 0px;">
-                                <p class="header-email"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;<a href="#">infos@pae-essambanet</a>
-                                    <span style="padding-left: 10px;"><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp;<a href="#">+237 123 456 789</a></span>
+                                <p class="header-email"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;<a href="#">{{ $others->email ?? null }}</a>
+                                    <span style="padding-left: 10px;"><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp;<a href="#">+{{ $others->phone ?? null }}</a></span>
                                     <span style="float: right" class="nav-social">
                                         <span class="follow-us-nav text-right">Follow Us:</span>
-                                    <a href="#"><i class="fa fa-facebook-square"></i></a>
-                                    <a href="#"><i class="fa fa-twitter-square"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin-square"></i></a>
-                                    <a href="#"><i class="fa fa-skype"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="{{ $others->fb_link ?? null }}"><i class="fa fa-facebook-square"></i></a>
+                                    <a href="{{ $others->tweet_link ?? null }}"><i class="fa fa-twitter-square"></i></a>
+                                    <a href="{{ $others->link_in ?? null }}"><i class="fa fa-linkedin-square"></i></a>
+                                    <a href="{{ $others->you_link ?? null }}"><i class="fa fa-youtube"></i></a>
+                                    <a href="{{ $others->skype ?? null }}"><i class="fa fa-skype"></i></a>
+                                    <a href="{{ $others->insta_link ?? null }}"><i class="fa fa-instagram"></i></a>
                                     </span>
                             </div>
                             <div class="col-md-12">

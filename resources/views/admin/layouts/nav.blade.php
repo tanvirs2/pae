@@ -65,17 +65,17 @@
             <span>About</span></a>
     </li>
 
-    <li class="nav-item {{ Route::is('about-show') ? 'active':null }}">
-        <a class="nav-link" href="{{ route('about-show') }}">
+    <li class="nav-item {{ Route::is('team-list') ? 'active':null }}">
+        <a class="nav-link" href="{{ route('team-list') }}">
             <i class="fas fa-fw fa-users"></i>
             <span>Team</span></a>
     </li>
 
     <!-- Nav Item - Tables -->
-    <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+    <li class="nav-item {{ Route::is('others-show') ? 'active':null }}">
+        <a class="nav-link" href="{{ route('others-show') }}">
             <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
+            <span>Others</span></a>
     </li>
 
     <!-- Divider -->

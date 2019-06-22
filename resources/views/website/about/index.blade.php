@@ -72,12 +72,12 @@
                 <div class="col-md-4 col-sm-12">
                     <i class="fa fa-phone-square"></i>
                     <span>Call Us</span>
-                    <p>+237 123 456 789</p>
+                    <p>+{{ $others->phone ?? null }}</p>
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <i class="fa fa-phone-square"></i>
                     <span>Email Us</span>
-                    <p style="font-size: 25px;">infos@pae-essambanet </p>
+                    <p style="font-size: 25px;">{{ $others->email ?? null }} </p>
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <i class="fa fa-map"></i>

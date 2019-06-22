@@ -44,6 +44,9 @@ Route::prefix('home')->group(function (){
     Route::get('event-list', $controllerName.'Controller@eventList')->name($prefixName.'-event-list');
     Route::get('single-event/{event}', $controllerName.'Controller@showSingleEvent')->name($prefixName.'-single-event');
 
+    Route::get('team-list', $controllerName.'Controller@teamList')->name($prefixName.'-team-list');
+    Route::get('single-team/{team}', $controllerName.'Controller@showSingleTeam')->name($prefixName.'-single-team');
+
     Route::get('contact', $controllerName.'Controller@contactPage')->name($prefixName.'-contact');
 
     Route::get('about', $controllerName.'Controller@aboutPage')->name($prefixName.'-about');
@@ -146,6 +149,19 @@ Route::prefix('event')->group(function (){
     Route::get('edit/{'.Str::camel($prefixName).'}', $controllerName.'Controller@edit')->name($prefixName.'-edit');
     Route::patch('update/{'.Str::camel($prefixName).'}', $controllerName.'Controller@update')->name($prefixName.'-update');
     Route::get('destroy/{'.Str::camel($prefixName).'}', $controllerName.'Controller@destroy')->name($prefixName.'-destroy');
+});
+
+//___8
+Route::prefix('others')->group(function (){
+    $prefixName = 'others';
+    $controllerName = Str::studly($prefixName);
+    //Route::get('list', $controllerName.'Controller@index')->name($prefixName.'-list');
+    //Route::get('create', $controllerName.'Controller@create')->name($prefixName.'-create');
+    //Route::post('store', $controllerName.'Controller@store')->name($prefixName.'-store');
+    Route::get('show', $controllerName.'Controller@show')->name($prefixName.'-show');
+    Route::get('edit', $controllerName.'Controller@edit')->name($prefixName.'-edit');
+    Route::patch('update', $controllerName.'Controller@update')->name($prefixName.'-update');
+    //Route::get('destroy/{'.Str::camel($prefixName).'}', $controllerName.'Controller@destroy')->name($prefixName.'-destroy');
 });
 
 Auth::routes();

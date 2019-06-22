@@ -6,8 +6,10 @@ use App\About;
 use App\Event;
 use App\Home;
 use App\News;
+use App\Others;
 use App\Project;
 use App\Blog;
+use App\Team;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -21,7 +23,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('website.home.index');
+        $teams = Team::all()->take(4);
+        $projects = Project::all()->take(3);
+        $newses = News::all()->take(3);
+        $compact = compact(
+            'teams',
+            'projects',
+            'newses'
+        );
+        return view('website.home.index', $compact);
     }
 
 
@@ -118,6 +128,31 @@ class HomeController extends Controller
         );
 
         return view('website.event.single', $compact);
+    }
+
+
+    public function teamList()
+    {
+        $newses = Team::all();
+        $compact = compact(
+            'newses'
+        );
+        return view('website.team.index', $compact);
+    }
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\News  $news
+     * @return \Illuminate\Http\Response
+     */
+    public function showSingleTeam(Team $team)
+    {
+        $news = $team;
+        $compact = compact(
+            'news'
+        );
+
+        return view('website.team.single', $compact);
     }
 
     public function contactPage()

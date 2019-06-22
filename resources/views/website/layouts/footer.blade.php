@@ -10,9 +10,9 @@
             <div class="col-md-3 col-sm-3">
                 <div id="newlsetterForm" class="clearfix">
                     <h3>Contacts</h3>
-                    <p><i class="fa fa-home">&nbsp;</i> <span>Addresse:</span>70 Rue Alfred Saker, Douala, Cameroun</p>
-                    <p><i class="fa fa-phone-square">&nbsp;</i> <span>Phone</span> +237 123 456 789</p>
-                    <p><i class="fa fa-envelope-o">&nbsp;</i> <span>Email:</span>infos@pae-essamba.net</p>
+                    <p><i class="fa fa-home">&nbsp;</i> <span>Addresse:</span>{{ $others->address ?? null }}</p>
+                    <p><i class="fa fa-phone-square">&nbsp;</i> <span>Phone</span> +{{ $others->phone ?? null }}</p>
+                    <p><i class="fa fa-envelope-o">&nbsp;</i> <span>Email:</span>{{ $others->email ?? null }}</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-3">

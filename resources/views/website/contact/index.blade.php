@@ -32,8 +32,8 @@
                             <i class="fa fa-phone"></i>
                         </div>
                         <div class="contact__details">
-                            <p><span>Phone</span> : +237 123 456 789
-                                <br>+237 123 456 789
+                            <p><span>Phone</span> : +{{ $others->email ?? null }}
+                                <br>+{{ $others->phone ?? null }}
                             </p>
                         </div>
                     </div>
@@ -44,8 +44,8 @@
                             <i class="fa fa-envelope-o"></i>
                         </div>
                         <div class="contact__details">
-                            <p><span>Email</span> : infos@pae-essamba.net
-                                <br>infos@pae-essamba.net
+                            <p><span>Email</span> : {{ $others->email ?? null }}
+                                <br>{{ $others->email ?? null }}
                             </p>
                         </div>
                     </div>
