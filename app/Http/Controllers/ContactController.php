@@ -14,7 +14,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $objs = Contact::all();
+        $objs = Contact::latest()->get();
         $compact = compact(
             'objs'
         );
