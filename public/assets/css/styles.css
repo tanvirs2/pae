@@ -44,7 +44,7 @@ body{
     padding: 0;
 }
 .flag-dropdown{
-    background-color: white;border-radius: 13px;margin-top: 11px;
+    background-color: white;border-radius:4px;margin-top: 11px;
 }
 .flag-dropdown .dropdown-toggle{text-decoration: none;padding: 2px;}
 .flag-dropdown > a:focus, .flag-dropdown > a:hover {
@@ -64,13 +64,13 @@ body{
 {font-family: 'typo-round-light', Fallback, sans-serif;color: white;font-size: 18px;}
 .navigation-clean.navbar-default .navbar-nav > .active > a {color: #B2F21C;}
 .navbar-brand {
-    height: 100px;
+    height:85px;
 }
 .navigation-clean.navbar .navbar-nav > li > a {
     padding-left: 13px;
     padding-right: 13px;
 }
-.header-email{padding-left: 15px;font-family: 'typo-round-light', Fallback, sans-serif;}
+.header-email{padding-left: 100px;font-family: 'typo-round-light', Fallback, sans-serif;}
 .header-email i {color: #B2F21C;}
 .header-email a {text-decoration: none; color: white;}
 .follow-us-nav {color: white;}
@@ -151,7 +151,8 @@ body{
     height: 100%;
 }
 .breadcrumbs{
-    font-family: 'typo-round-bold', Fallback, sans-serif; color: #388f22;font-size: 25px;
+    /*font-family: 'typo-round-bold', Fallback, sans-serif; color: #388f22;*/
+    /*font-size: 25px;*/
 }
 .custom-search-form button{
     border-top-right-radius: 25px;
@@ -191,7 +192,7 @@ body{
     margin-top: 0;
     margin-bottom: 12px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
     border-left: 10px solid #B2F21C;
     padding-left: 2%;
 }
@@ -201,13 +202,14 @@ body{
     margin-top: 0;
     margin-bottom: 12px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
     padding-left: 2%;
 }
 .footerBg img{display: inline;padding-right: 5px;}
 .subscriber-form input {
     height: 44px;
     background-color: transparent;
+    border-radius: 0px;
 }
 .custom-searsubscriber-formch-form button{
     border-top-right-radius: 0px;
@@ -224,8 +226,8 @@ body{
     width: 100%;
     height: auto;
 }
-.footerBg p{color: white;font-size: 16px;}
-#news p {text-align: left;font-size: 17px;}
+.footerBg p{color: white;font-size: 14px;}
+#news p {text-align: left;font-size: 14px;margin-top: 5px;}
 .copyRtAckSocialBg p {color: whitesmoke;}
 #copyRtAck, #social {
     margin: 15px 0px 10px 0px;
@@ -243,15 +245,15 @@ body{
 }
 #copyRtAck a {text-decoration: none;color: white;font-size: 17px;font-weight: bold;}
 .know-us{
-    height: 375px;
+    height: 335px;
     background-image: url("../images/know-more.jpg");
     background-repeat: no-repeat, repeat;
     background-position: center;
     background-size: cover;
 }
-.know-us h2{color: white; font-size: 40px; float: right;border-left: 12px solid #B2F21C;display: inline-block;}
+.know-us h3{color: white; float: right;border-left: 12px solid #B2F21C;display: inline-block;}
 .know-us .container {padding-top: 2%;}
-.know-us .col-md-4 {margin: 19px 19px 19px 5px;background-color: white; padding: 42px 10px 10px 10px;height: 190px;text-align: center; width: 31%;}
+.know-us .col-md-4 {margin: 19px 19px 19px 5px;background-color: white; padding: 42px 10px 10px 10px;height: 160px;text-align: center; width: 31%;}
 .know-us i {
     font-size: 40px;
     color: #239f23;
@@ -264,6 +266,7 @@ body{
     padding-left: 4%;
 }
 .know-us p {font-size: 35px;padding-top: 2%;}
+.know-us p a {text-decoration: none; color: black;}
 #newlsetterForm span{font-weight: bold;}
 /*Calendar-title*/
 #calendar-tittle{
@@ -376,9 +379,13 @@ body{
     text-align: right;
     float: right;
     color: #078507;
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 24px;
+    /*font-weight: bold;*/
     padding-top: 2%;
+}
+.view-more:hover {
+    color: #078507;
+    text-decoration: none;
 }
 /*Team*/
 .team {
@@ -424,7 +431,7 @@ body{
 }
 .team .data {
     position: absolute;
-    bottom: 50px;
+    bottom: 75px;
     width: 100%;
     -webkit-transform: translateY(calc(70px + 1em));
     transform: translateY(calc(70px + 1em));
@@ -501,28 +508,27 @@ body{
 
 /*Tabbed Content*/
 #projects .btn{
-    font-weight: bold;
-    font-size: 25px;
+    /*font-weight: bold;*/
+    font-size: 24px;
 }
 .project-active{
     background-image: url("../images/tab-background.png");
     color: white;
 }
 .btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
-    border-top-left-radius: 10px;
+    border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
 
 }
 .btn-white{background-color: white;color: #605e5e;}
 #projects .btn-group{background-color: white;}
 #projects .hidden-xs {
-    min-height: 100px;
-    padding: 2% 1% 2% 1%;
+    min-height: 80px;
+    /*padding: 2% 1% 2% 1%;*/
     word-break: break-all;
 }
-#projects .well {margin-bottom: 0px;}
-.tab-pane h3{font-weight: bold;font-size: 26px;
-    color: #605e5e;}
+#projects .well {margin-bottom: 0px;box-shadow: none;}
+.tab-pane h3{color: #605e5e;}
 .tab-pane h3:after {
     content: "";
     display: block;
@@ -531,10 +537,11 @@ body{
 }
 .tab-pane p {font-size: 16px;color: #545353;padding-top: 1%;}
 .tab-pane a{text-align: left;
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 24px;
+    /*font-weight: bold;*/
     padding-top: 2%;
     color: #078507;
+    text-decoration: none;
 }
 .dot {
     height: 25px;
@@ -690,6 +697,9 @@ body{
 .blog .pagination > .active > a, .pagination > .active > a:focus{color: white;background-color: #065c05;}
 /*Blog Page Styles */
 /*Luv Page Styles*/
+#tab1 input{height: 50px;}
+#tab1 .input-group{padding-top: 10px;}
+#tab1 .input-group label{color: #818181;}
 .luv-slider-text span {
     color: #e3e008;
 }
@@ -704,7 +714,7 @@ body{
     background-color: #068106;
     background-image: linear-gradient(to bottom,#068106 0,#068106 100%);
     font-weight: normal;
-    padding: 2%;
+    padding: 1.2%;
 }
 #luv-data{bottom: 84px;}
 #luv-data .content{background-color: #068106;}

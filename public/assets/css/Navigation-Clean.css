@@ -1,12 +1,13 @@
 .navigation-clean {
   background:#fff;
   padding-top:10px;
-  padding-bottom:5px;
+  padding-bottom:0px;
   color:#333;
   border-radius:0;
   box-shadow:none;
   border:none;
   margin-bottom:0;
+  text-transform: capitalize;
 }
 
 @media (max-width:767px) {
@@ -37,7 +38,7 @@
 }
 
 .navigation-clean .navbar-brand img {
-  height:95%;
+  height:85%;
   display:inline-block;
   margin-right:10px;
   width:auto;
@@ -93,7 +94,7 @@
 }
 
 .navigation-clean.navbar-default .navbar-nav > li > a:focus, .navigation-clean.navbar-default .navbar-nav > li > a:hover {
-  color:#37434d !important;
+  color:white !important;
   background-color:transparent;
 }
 
