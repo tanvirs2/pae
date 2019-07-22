@@ -29,6 +29,12 @@
 
 
     <!-- Nav Item - Charts -->
+    <li class="nav-item {{ Route::is('language-list') ? 'active':null }}">
+        <a class="nav-link" href="{{ route('language-list') }}">
+            <i class="fas fa-fw fa-ethernet"></i>
+            <span>Language</span></a>
+    </li>
+
     <li class="nav-item {{ Route::is('news-list') ? 'active':null }}">
         <a class="nav-link" href="{{ route('news-list') }}">
             <i class="fas fa-fw fa-chart-area"></i>
@@ -111,7 +117,7 @@
                 <li class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
-                        <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                        <img class="img-profile rounded-circle" src="https://source.unsplash.com/ILip77SbmOE/60x60">
                     </a>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
