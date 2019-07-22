@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        //dd(changLang('আমার সোনার বাংলা'));
         $teams = Team::all()->take(4);
         $projects = Project::all()->take(3);
         $newses = News::all()->take(3);

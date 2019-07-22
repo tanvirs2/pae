@@ -24,7 +24,7 @@
                             </div>
                             <div class="col-md-12">
                                 <ul class="nav navbar-nav navbar-right">
-                                    <li class="{{ Request::is('/')?'active':null }}" role="presentation"><a href="{{ url('/') }}"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a></li>
+                                    <li class="{{ Request::is('/')?'active':null }}" role="presentation"><a href="{{ url('/') }}"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;@lang('menu.home_page')</a></li>
                                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">About Us <span class="caret"></span></a>
                                         <ul class="dropdown-menu" role="menu">
                                             <li class="{{ Route::is('home-about') ? 'active':null }}" role="presentation"><a href="{{ route('home-about') }}">About Us</a></li>
@@ -38,9 +38,10 @@
                                     <li class="{{ Route::is('home-contact')?'active':null }}" role="presentation"><a href="{{ route('home-contact') }}">Contacts</a></li>
                                     <li class="dropdown">
                                         <div class="flag-dropdown">
-                                            <a href="index" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-expanded="false"><img src="{{ asset('') }}assets/images/US-Eng-logo.png" alt="English" class="img-thumbnail icon-small">&nbsp;|&nbsp;<span>En</span> <span class="caret"></span></a>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="{{ asset('') }}assets/images/{{ (app()->getLocale() == 'en') ? 'US-Eng-logo' : 'bn' }}.png" alt="English" class="img-thumbnail icon-small">&nbsp;|&nbsp;<span>{{ app()->getLocale() }}</span> <span class="caret"></span></a>
                                             <ul class="dropdown-menu" role="menu">
-                                                <li><a id="navBan" href="index?lang=bn" class="language"> <img src="{{ asset('') }}assets/images/US-Eng-logo.png" alt="Bengali" class="img-thumbnail icon-small"><span>&nbsp;|&nbsp;En</span></a></li>
+                                                <li><a id="navBan" href="locale/en" class="language"> <img src="{{ asset('') }}assets/images/US-Eng-logo.png" alt="Bengali" class="img-thumbnail icon-small"><span>&nbsp;|&nbsp;En</span></a></li>
+                                                <li><a id="navBan" href="locale/fr" class="language"> <img src="{{ asset('') }}assets/images/bn.png" alt="Bengali" class="img-thumbnail icon-small"><span>&nbsp;|&nbsp;Bn</span></a></li>
                                             </ul>
                                         </div>
                                     </li>

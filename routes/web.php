@@ -164,6 +164,19 @@ Route::prefix('others')->group(function (){
     //Route::get('destroy/{'.Str::camel($prefixName).'}', $controllerName.'Controller@destroy')->name($prefixName.'-destroy');
 });
 
+Route::get('locale/{locale}', function ($locale) {
+
+    Session::put('locale', $locale);
+    //App::setLocale($locale);
+
+    return redirect()->back();
+});
+
+
+Route::get('changLang', function (){
+    setLang('tnnn');
+})->name('changLang');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
