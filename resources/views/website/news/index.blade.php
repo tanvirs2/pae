@@ -19,7 +19,7 @@
                             <img src="{{ $news->newsImg() }}" class="img-responsive center-block" style="height: 200px">
                         </div>
                         <div class="panel-footer" style="height: 60px;">{{ Str::limit($news->details, 50, '...') }}
-                            <a href="{{ route('home-single-news', $news->id) }}"><small>বিস্তারিত</small></a>
+                            <a href="{{ route('home-single-news', $news->id) }}"><small>Details</small></a>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                 <div id="calendar"></div>
                 <h3>Ads Title</h3>
                 <img src="{{ asset('') }}assets/images/Rectangle-64.png" class="img-responsive">
-                <h3>Follow us on Facebook</h3>
+                <h3>{{ $lang->follow }}</h3>
                 <img src="{{ asset('') }}assets/images/facebook-page.JPG" class="img-responsive">
                 <h3>Recent post</h3>
                 <div style="background-image: url({{ asset('') }}assets/images/Recent-post.png)" class="recent-post">

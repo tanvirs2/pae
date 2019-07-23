@@ -19,7 +19,7 @@
                             <img src="{{ $news->getImage('event') }}" class="img-responsive center-block" style="height: 200px">
                         </div>
                         <div class="panel-footer" style="height: 60px;">{{ Str::limit($news->details, 50, '...') }}
-                            <a href="{{ route('home-single-event', $news->id) }}"><small>বিস্তারিত</small></a>
+                            <a href="{{ route('home-single-event', $news->id) }}"><small>Details</small></a>
                         </div>
                     </div>
                 </div>

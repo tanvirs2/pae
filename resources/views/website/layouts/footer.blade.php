@@ -22,13 +22,13 @@
                         <div class="input-group subscriber-form">
                             <input type="text" class="form-control" placeholder="Enter email" required>
                             <span class="input-group-btn">
-              <button class="btn-search" type="submit" style="color: #055a05;background-color: white;">
-              Submit
-             </button>
-             </span>
+                              <button class="btn-search" type="submit" style="color: #055a05;background-color: white;">
+                              Submit
+                             </button>
+                             </span>
                         </div>
                     </form>
-                    <h4 class="top-30">Our partners</h4>
+                    <h4 class="top-30">{{ $lang->partners }}</h4>
                     <img class="img-responsive" src="{{ asset('') }}assets/images/partners/briluce_logo_A0_Rectangle_70_pattern.png">
                     <img class="img-responsive" src="{{ asset('') }}assets/images/partners/bdtask_1508059680_280_A0_Rectangle_72_pattern.png">
                 </div>

@@ -14,19 +14,81 @@
                             </div>
                             <form class="user" action="{{ route($pageData['route'].'-store') }}" method="post" enctype="multipart/form-data">
                                 @csrf
-                                <div class="form-group">
+                                {{--<div class="form-group">
                                     <input type="file" name="img">
+                                </div>--}}
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" name="language_name" class="form-control form-control-user" placeholder="language_name">
+                                    </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" name="title" class="form-control form-control-user" placeholder="Title">
+                                        <input type="text" name="home" class="form-control form-control-user" placeholder="home">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="date" name="date" class="form-control form-control-user" placeholder="Details">
+                                        <input type="text" name="news" class="form-control form-control-user" placeholder="news">
                                     </div>
                                 </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" name="contact" class="form-control form-control-user" placeholder="contact">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" name="blog" class="form-control form-control-user" placeholder="blog">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" name="partners" class="form-control form-control-user" placeholder="partners">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" name="training" class="form-control form-control-user" placeholder="training">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" name="conference" class="form-control form-control-user" placeholder="conference">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" name="evaluation" class="form-control form-control-user" placeholder="evaluation">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" name="post" class="form-control form-control-user" placeholder="post">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" name="reports" class="form-control form-control-user" placeholder="reports">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" name="article" class="form-control form-control-user" placeholder="article">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" name="activity" class="form-control form-control-user" placeholder="activity">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" name="recent_news" class="form-control form-control-user" placeholder="recent_news">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" name="team" class="form-control form-control-user" placeholder="team">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" name="about" class="form-control form-control-user" placeholder="about">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" name="follow" class="form-control form-control-user" placeholder="follow">
+                                    </div>
+                                </div>
+
                                 <div class="form-group">
-                                    <textarea name="details" class="form-control form-control-user" ></textarea>
+                                    <textarea name="lang_about" class="form-control form-control-user" ></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
                                     Save {{ $pageData['pageName'] }}

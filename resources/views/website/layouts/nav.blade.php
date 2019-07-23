@@ -13,7 +13,7 @@
                                 <p class="header-email"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;<a href="#">{{ $others->email ?? null }}</a>
                                     <span style="padding-left: 10px;"><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp;<a href="#">+{{ $others->phone ?? null }}</a></span>
                                     <span style="float: right" class="nav-social">
-                                        <span class="follow-us-nav text-right">Follow Us:</span>
+                                        <span class="follow-us-nav text-right">{{ $lang->follow }}:</span>
                                     <a href="{{ $others->fb_link ?? null }}"><i class="fa fa-facebook-square"></i></a>
                                     <a href="{{ $others->tweet_link ?? null }}"><i class="fa fa-twitter-square"></i></a>
                                     <a href="{{ $others->link_in ?? null }}"><i class="fa fa-linkedin-square"></i></a>

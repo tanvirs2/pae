@@ -83,7 +83,7 @@
                     </div>
                     <!-- Left and right controls -->
                     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></spas>
+                        <span class="glyphicon glyphicon-chevron-left"></span>
                             <span class="sr-only">Previous</span>
                     </a>
                     <a class="right carousel-control" href="#myCarousel" data-slide="next">
@@ -103,7 +103,7 @@
 <div class="container" style="padding-top: 30px;padding-bottom: 35px;">
     <div class="row">
         <div class="col-md-12">
-            <h4 class="breadcrumbs"><i class="fa fa-newspaper-o" aria-hidden="true"></i>&nbsp;Recent News</h4>
+            <h4 class="breadcrumbs"><i class="fa fa-newspaper-o" aria-hidden="true"></i>&nbsp;{{ $lang->recent_news }}</h4>
         </div>
     </div>
     <div class="row">
@@ -162,7 +162,7 @@
     <div class="container" style="padding-top: 30px;padding-bottom: 35px;">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="breadcrumbs"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Our Team</h4>
+                <h4 class="breadcrumbs"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;{{ $lang->team }}</h4>
                 <p style="font-size: 18px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Aenean bibendum diam ut lectus pulvinar dignissim. Mauris eu nibh eu dolor cursus fringilla.</p>
             </div>
         </div>
@@ -205,7 +205,7 @@
                         @foreach($projects as $project)
                             <div class="btn-group" role="group">
                                 <button type="button" class="btn project-active btn-white" href="#tab{{ $project->id }}" data-toggle="tab">
-                                    <div class="hidden-xs">Trainee<br>student project</div>
+                                    <div class="hidden-xs">{{ $lang->training }}<br>student project</div>
                                 </button>
                             </div>
 

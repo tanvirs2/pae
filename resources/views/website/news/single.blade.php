@@ -66,7 +66,7 @@
                 <div id="calendar"></div>
                 <h3>Ads Title</h3>
                 <img src="{{ asset('') }}assets/images/Rectangle-64.png" class="img-responsive">
-                <h3>Follow us on Facebook</h3>
+                <h3>{{ $lang->follow }}</h3>
                 <img src="{{ asset('') }}assets/images/facebook-page.JPG" class="img-responsive">
                 <h3>Recent post</h3>
                 <div style="background-image: url({{ asset('') }}assets/images/Recent-post.png)" class="recent-post">

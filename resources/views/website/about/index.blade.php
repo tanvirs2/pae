@@ -90,7 +90,7 @@
     <div class="container" style="padding-top: 30px;padding-bottom: 35px;">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="breadcrumbs"><i class="fa fa-newspaper-o" aria-hidden="true"></i>&nbsp;Recent News</h4>
+                <h4 class="breadcrumbs"><i class="fa fa-newspaper-o" aria-hidden="true"></i>&nbsp;{{ $lang->recent_news }}</h4>
             </div>
         </div>
         <div class="row">
