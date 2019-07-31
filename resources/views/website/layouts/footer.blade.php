@@ -9,15 +9,15 @@
             </div>
             <div class="col-md-3 col-sm-3">
                 <div id="newlsetterForm" class="clearfix">
-                    <h3>Contacts</h3>
-                    <p><i class="fa fa-home">&nbsp;</i> <span>Addresse:</span>{{ $others->address ?? null }}</p>
-                    <p><i class="fa fa-phone-square">&nbsp;</i> <span>Phone</span> +{{ $others->phone ?? null }}</p>
-                    <p><i class="fa fa-envelope-o">&nbsp;</i> <span>Email:</span>{{ $others->email ?? null }}</p>
+                    <h3>{{ $lang->contacts }}</h3>
+                    <p><i class="fa fa-home">&nbsp;</i> <span>{{ $lang->address }} : </span>{{ $others->address ?? null }}</p>
+                    <p><i class="fa fa-phone-square">&nbsp;</i> <span>{{ $lang->phone }} :</span> +{{ $others->phone ?? null }}</p>
+                    <p><i class="fa fa-envelope-o">&nbsp;</i> <span>{{ $lang->email }} :</span>{{ $others->email ?? null }}</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-3">
                 <div id="tweets" class="clearfix" >
-                    <h3>Subscribe to Newsletter</h3>
+                    <h3>{{ $lang->subscribe_to_newsletter }}</h3>
                     <form id="frmNewletter" name="frmNewletter" action="#" method="post">
                         <div class="input-group subscriber-form">
                             <input type="text" class="form-control" placeholder="Enter email" required>
@@ -35,7 +35,7 @@
             </div>
             <div class="col-md-3">
                 <div id="flckrStream" class="clearfix" >
-                    <h3>Our Facebook Page</h3>
+                    <h3>{{ $lang->our_facebook_page }}</h3>
                     <iframe allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"  style="border: medium none; visibility: visible; width: 262px; height: 175px;" src="https://www.facebook.com/v2.3/plugins/page.php?app_id=249643311490&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2Fd_vbiawPdxB.js%3Fversion%3D44%23cb%3Df2e3e9f3033a702%26domain%3Dwww.pae-essamba.org%26origin%3Dhttp%253A%252F%252Fwww.pae-essamba.org%252Ff1665df78d5b04a%26relation%3Dparent.parent&amp;container_width=390&amp;height=175&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fpaeessamba&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;width=auto" __idm_frm__="100931731479" class="" width="262px" height="175px" frameborder="0"></iframe>
                 </div>
             </div>

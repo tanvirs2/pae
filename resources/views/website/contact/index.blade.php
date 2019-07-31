@@ -58,26 +58,26 @@
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input  name="name" placeholder="Your Name" class="form-control"  type="text">
+                                <input  name="name" placeholder="{{ $lang->your_name }}" class="form-control"  type="text">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input name="email" placeholder="Your E-Mail Address" class="form-control" type="email">
+                                <input name="email" placeholder="{{ $lang->your_email_address }}" class="form-control" type="email">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                                <input name="phone" placeholder="Your phone" class="form-control" type="number">
+                                <input name="phone" placeholder="{{ $lang->your_phone }}" class="form-control" type="number">
                             </div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" name="massage" placeholder="Your message" rows="5"></textarea>
+                            <textarea class="form-control" name="massage" placeholder="{{ $lang->your_message }}" rows="5"></textarea>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-success btn-lg pull-right"><span class="glyphicon glyphicon-send"></span>&nbsp;Send message</button>
+                            <button type="submit" class="btn btn-success btn-lg pull-right"><span class="glyphicon glyphicon-send"></span>&nbsp;{{ $lang->send_message }}</button>
                         </div>
                     </fieldset>
                 </form>

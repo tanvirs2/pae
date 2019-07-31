@@ -48,15 +48,15 @@
 
                 </div>
                 <div class="col-md-4">
-                    <h3>Ads Title</h3>
+                    <h3>{{ $lang->ads_title }}</h3>
                     <img src="assets/images/Rectangle-64.png" class="img-responsive">
-                    <h3>Follow us on Facebook</h3>
+                    <h3>{{ $lang->follow_us_on_facebook }}</h3>
                     <img src="assets/images/facebook-page.JPG" class="img-responsive">
-                    <h3>Recent post</h3>
+                    <h3>{{ $lang->recent_post }}</h3>
                     <div style="background-image: url(assets/images/Recent-post.png)" class="recent-post">
                         <!--<div class="layer">-->
                         <!--<img src="assets/images/Recent-post.png" class="img-responsive">-->
-                        <h3>Visiting Our offices</h3>
+                        <h3>{{ $lang->visiting_our_offices }}</h3>
                         <!--</div>-->
                     </div>
                 </div>
@@ -76,12 +76,12 @@
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <i class="fa fa-phone-square"></i>
-                    <span>Email Us</span>
+                    <span>{{ $lang->email_us }}</span>
                     <p style="font-size: 25px;">{{ $others->email ?? null }} </p>
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <i class="fa fa-map"></i>
-                    <span>Find Us On</span>
+                    <span>{{ $lang->find_us_on }}</span>
                     <p style="font-size: 25px;">Google Maps</p>
                 </div>
             </div>

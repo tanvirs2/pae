@@ -54,15 +54,15 @@
                 </div>
                 <h4 id="calendar-tittle"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Calendar of events</h4>
                 <div id="calendar"></div>
-                <h3>Ads Title</h3>
+                <h3>{{ $lang->ads_title }}</h3>
                 <img src="{{ asset('') }}assets/images/Rectangle-64.png" class="img-responsive">
                 <h3>{{ $lang->follow }}</h3>
                 <img src="{{ asset('') }}assets/images/facebook-page.JPG" class="img-responsive">
-                <h3>Recent post</h3>
+                <h3>{{ $lang->recent_post }}</h3>
                 <div style="background-image: url({{ asset('') }}assets/images/Recent-post.png)" class="recent-post">
-                    <h3>Visiting Our offices</h3>
+                    <h3>{{ $lang->visiting_our_offices }}</h3>
                 </div>
-                <h3>Our youtube video</h3>
+                <h3>{{ $lang->our_youtube_video }}</h3>
                 <div class="embed-responsive embed-responsive-4by3">
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/THymiwMZjDI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>

@@ -42,6 +42,29 @@
                         <p class="text-capitalize"><b>team : </b>   {{ $news->team }}</p>
                         <p class="text-capitalize"><b>about : </b>  {{ $news->about }}</p>
                         <p class="text-capitalize"><b>follow : </b>     {{ $news->follow }}</p>
+                        <p class="text-capitalize"><b>our_facebook_page : </b>     {{ $news->our_facebook_page }}</p>
+                        <p class="text-capitalize"><b>view_full_team_list : </b>     {{ $news->view_full_team_list }}</p>
+                        <p class="text-capitalize"><b>view_full_list : </b>     {{ $news->view_full_list }}</p>
+                        <p class="text-capitalize"><b>related_project : </b>     {{ $news->related_project }}</p>
+                        <p class="text-capitalize"><b>call_us : </b>     {{ $news->call_us }}</p>
+                        <p class="text-capitalize"><b>email_us : </b>     {{ $news->email_us }}</p>
+                        <p class="text-capitalize"><b>find_us_on : </b>     {{ $news->find_us_on }}</p>
+                        <p class="text-capitalize"><b>read_more : </b>     {{ $news->read_more }}</p>
+                        <p class="text-capitalize"><b>subscribe_to_newsletter : </b>     {{ $news->subscribe_to_newsletter }}</p>
+                        <p class="text-capitalize"><b>contacts : </b>     {{ $news->contacts }}</p>
+                        <p class="text-capitalize"><b>address : </b>     {{ $news->address }}</p>
+                        <p class="text-capitalize"><b>phone : </b>     {{ $news->phone }}</p>
+                        <p class="text-capitalize"><b>email : </b>     {{ $news->email }}</p>
+                        <p class="text-capitalize"><b>our_youtube_video : </b>     {{ $news->our_youtube_video }}</p>
+                        <p class="text-capitalize"><b>recent_post : </b>     {{ $news->recent_post }}</p>
+                        <p class="text-capitalize"><b>ads_title : </b>     {{ $news->ads_title }}</p>
+                        <p class="text-capitalize"><b>visiting_our_offices : </b>     {{ $news->visiting_our_offices }}</p>
+                        <p class="text-capitalize"><b>follow_us_on_facebook : </b>     {{ $news->follow_us_on_facebook }}</p>
+                        <p class="text-capitalize"><b>send_message : </b>     {{ $news->send_message }}</p>
+                        <p class="text-capitalize"><b>your_name : </b>     {{ $news->your_name }}</p>
+                        <p class="text-capitalize"><b>your_email_address : </b>     {{ $news->your_email_address }}</p>
+                        <p class="text-capitalize"><b>your_phone : </b>     {{ $news->your_phone }}</p>
+                        <p class="text-capitalize"><b>your_message : </b>     {{ $news->your_message }}</p>
                         <div>
                             <p>
                                 {{ $news->lang_about }}

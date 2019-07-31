@@ -14,7 +14,7 @@
                                     <h3>The <span>Student support</span></h3>
                                     <h3><span>program </span>website</h3>
                                     <div style="padding-top: 1%;">
-                                        <a href="#" class="read-more">Read More<i class="fa-fw fa fa-arrow-circle-right"></i> </a>
+                                        <a href="#" class="read-more">{{ $lang->read_more }}<i class="fa-fw fa fa-arrow-circle-right"></i> </a>
                                         <a href="#" class="sign-up">Sign up<i class="fa-fw fa fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
@@ -142,17 +142,17 @@
         <div class="row">
             <div class="col-md-4 col-sm-12">
                 <i class="fa fa-phone-square"></i>
-                <span>Call Us</span>
+                <span>{{ $lang->call_us }}</span>
                 <p>+{{ $others->phone ?? null }}</p>
             </div>
             <div class="col-md-4 col-sm-12">
                 <i class="fa fa-phone-square"></i>
-                <span>Email Us</span>
+                <span>{{ $lang->email_us }}</span>
                 <p style="font-size: 25px;">{{ $others->email ?? null }}</p>
             </div>
             <div class="col-md-4 col-sm-12">
                 <i class="fa fa-map"></i>
-                <span>Find Us On</span>
+                <span>{{ $lang->find_us_on }}</span>
                 <p style="font-size: 25px;">Google Maps</p>
             </div>
         </div>
@@ -186,7 +186,7 @@
             </div>
             @endforeach
             <div class="col-md-12">
-                <a href="{{ route('home-team-list') }}" class="view-more">View full team list &nbsp; <i class="fa fa-arrow-right"></i></a>
+                <a href="{{ route('home-team-list') }}" class="view-more">{{ $lang->view_full_team_list }} &nbsp; <i class="fa fa-arrow-right"></i></a>
             </div>
         </div>
     </div>
@@ -195,7 +195,7 @@
     <div class="container" style="padding-top: 30px;padding-bottom: 35px;">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="breadcrumbs"><i class="fa fa-share-alt" aria-hidden="true"></i>&nbsp;Related Project</h4>
+                <h4 class="breadcrumbs"><i class="fa fa-share-alt" aria-hidden="true"></i>&nbsp;{{ $lang->related_project }}</h4>
             </div>
         </div>
         <div class="row">
@@ -226,7 +226,7 @@
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <a href="{{ route('home-project-list') }}" class="view-more">View full list &nbsp; <i class="fa fa-arrow-right"></i></a>
+                    <a href="{{ route('home-project-list') }}" class="view-more">{{ $lang->view_full_list }} &nbsp; <i class="fa fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
