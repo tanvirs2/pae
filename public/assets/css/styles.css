@@ -244,8 +244,23 @@ body{
     -ms-transition: color 1s ease-in-out;
 }
 #copyRtAck a {text-decoration: none;color: white;font-size: 17px;font-weight: bold;}
+
+.know-us .col-md-4 p {
+    font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+    .know-us .col-md-4 p {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+}
+@media screen and (min-width: 1000px) {
+    .know-us .col-md-4 p {
+        font-size: 22px;
+    }
+}
+
 .know-us{
-    height: 335px;
+    /*height: 335px;*/
     background-image: url("../images/know-more.jpg");
     background-repeat: no-repeat, repeat;
     background-position: center;
@@ -253,7 +268,7 @@ body{
 }
 .know-us h3{color: white; float: right;border-left: 12px solid #B2F21C;display: inline-block;}
 .know-us .container {padding-top: 2%;}
-.know-us .col-md-4 {margin: 19px 19px 19px 5px;background-color: white; padding: 42px 10px 10px 10px;height: 160px;text-align: center; width: 31%;}
+.know-us .col-md-4 .col-md-12 {background-color: white; padding: 42px 10px 10px 10px;height: 160px;text-align: center;}
 .know-us i {
     font-size: 40px;
     color: #239f23;

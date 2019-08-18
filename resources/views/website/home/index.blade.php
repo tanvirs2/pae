@@ -133,27 +133,33 @@
         </div>
     </div>
 </div>
-</div>
 <div class="container-fluid know-us">
     <div class="container">
         <div class="row">
             <h2>&nbsp;Need to <b>know more?</b></h2>
         </div>
-        <div class="row">
+        <div class="row" style="padding-bottom: 5%">
             <div class="col-md-4 col-sm-12">
-                <i class="fa fa-phone-square"></i>
-                <span>{{ $lang->call_us }}</span>
-                <p>+{{ $others->phone ?? null }}</p>
+                <div class="col-md-12">
+                    <i class="fa fa-phone-square"></i>
+                    <span>{{ $lang->call_us }}</span>
+                    <p style="font-size: 2em">+{{ $others->phone ?? null }}</p>
+                </div>
             </div>
             <div class="col-md-4 col-sm-12">
-                <i class="fa fa-phone-square"></i>
-                <span>{{ $lang->email_us }}</span>
-                <p style="font-size: 25px;">{{ $others->email ?? null }}</p>
+                <div class="col-md-12">
+                    <i class="fa fa-phone-square"></i>
+                    <span>{{ $lang->email_us }}</span>
+                    <p style="font-size: 2em;">{{ $others->email ?? null }}</p>
+                </div>
             </div>
             <div class="col-md-4 col-sm-12">
-                <i class="fa fa-map"></i>
-                <span>{{ $lang->find_us_on }}</span>
-                <p style="font-size: 25px;">Google Maps</p>
+                <div class="col-md-12">
+                    <i class="fa fa-map"></i>
+                    <span>{{ $lang->find_us_on }}</span>
+                    <p style="font-size: 2em;">Google Maps</p>
+                </div>
+
             </div>
         </div>
     </div>
